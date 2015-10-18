@@ -7,12 +7,17 @@
 //
 
 import UIKit
-
+import FeetInchDelegate
 class ViewController: UIViewController {
-
+    
+    let del = FeetInchDelegate()
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        textField.delegate = del
     }
 
     override func didReceiveMemoryWarning() {

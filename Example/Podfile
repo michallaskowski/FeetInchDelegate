@@ -8,6 +8,6 @@ end
 target 'FeetInchDelegate_Tests', :exclusive => true do
   pod "FeetInchDelegate", :path => "../"
 
-  pod 'Quick', '~> 0.3.1'
+  pod 'Quick', '~> 0.6.0'
   pod 'Nimble'
 end
