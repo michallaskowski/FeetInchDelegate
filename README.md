@@ -8,6 +8,8 @@
 
 UITextFieldDelegate that enforces use of impierial units (feets and inches) for entering data in UITextField. Based on regex, allows customization.
 
+![screenshot](Screenshots/example.gif)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
