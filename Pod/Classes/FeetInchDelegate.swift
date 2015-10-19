@@ -85,6 +85,15 @@ public class FeetInchDelegate : NSObject ,UITextFieldDelegate {
         let newText = text.stringByReplacingCharactersInRange(range, withString: string) as String
         let matches = self.expression.matchesInString(newText, options: NSMatchingOptions(), range: NSMakeRange(0, newText.characters.count))
         let matchOk = matches.count == 1
+        //if the newText stops to match the regex and is of lower length - user hitted backspace
+        //go to proper position - user goes back to edit feet or inches
+        if matchOk == false && newText.characters.count < textField.text!.characters.count  {
+            //move cursor to a proper position
+            guard let (feetRange, inchRange) = self.positionOfValuesInString(text as String) else { return matchOk }
+            let desiredPositionRange = range.location < inchRange.location ? feetRange : inchRange
+            let position:UITextPosition = textField.positionFromPosition(textField.beginningOfDocument, offset: desiredPositionRange.location + desiredPositionRange.length)!
+            textField.selectedTextRange = textField.textRangeFromPosition(position, toPosition: position)
+        }
         
         return matchOk
     }
