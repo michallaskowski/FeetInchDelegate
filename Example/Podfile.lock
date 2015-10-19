@@ -1,20 +1,14 @@
 PODS:
-  - FeetInchDelegate (0.1.0)
-  - Nimble (2.0.0)
-  - Quick (0.6.0)
+  - FeetInchDelegate (0.1.1)
 
 DEPENDENCIES:
   - FeetInchDelegate (from `../`)
-  - Nimble
-  - Quick (~> 0.6.0)
 
 EXTERNAL SOURCES:
   FeetInchDelegate:
     :path: ../
 
 SPEC CHECKSUMS:
-  FeetInchDelegate: e0dfcb5dd0ca21726107a16cc9250da7b07762be
-  Nimble: 472e75466819eb8c06299233e87c694a9b51328a
-  Quick: 563686dbcf0ae0f9f7401ac9cd2d786ee1b7f3d7
+  FeetInchDelegate: bb481626ea039e175f4aa41e404d25ea888095a1
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
