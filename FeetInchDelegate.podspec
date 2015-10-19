@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "FeetInchDelegate"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Delegate for UITextField, enforcing format for feets and inches"
 
   s.description      = <<-DESC
