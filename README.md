@@ -2,8 +2,11 @@
 
 [![CI Status](http://img.shields.io/travis/michallaskowski/FeetInchDelegate.svg?style=flat)](https://travis-ci.org/michallaskowski/FeetInchDelegate)
 [![Version](https://img.shields.io/cocoapods/v/FeetInchDelegate.svg?style=flat)](http://cocoapods.org/pods/FeetInchDelegate)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/FeetInchDelegate.svg?style=flat)](http://cocoapods.org/pods/FeetInchDelegate)
 [![Platform](https://img.shields.io/cocoapods/p/FeetInchDelegate.svg?style=flat)](http://cocoapods.org/pods/FeetInchDelegate)
+
+UITextFieldDelegate that enforces use of impierial units (feets and inches) for entering data in UITextField. Based on regex, allows customization.
 
 ## Usage
 
