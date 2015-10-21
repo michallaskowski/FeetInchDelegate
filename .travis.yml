@@ -16,8 +16,8 @@ install:
 
 script:
 - set -o pipefail
-- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 6" clean build | xcpretty -c || true
-- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 6" test | xcpretty -c
+- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" clean build | xcpretty -c || true
+- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" test
 
 #- open -b com.apple.iphonesimulator
 #- set -o pipefail && xcodebuild test -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -destination "OS=9.0,name=iPhone 6"
