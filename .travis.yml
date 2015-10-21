@@ -18,4 +18,4 @@ script:
 - xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" clean build | xcpretty -c || true
 - xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" test
 - pod lib lint --quick
-#4
+#5
