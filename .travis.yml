@@ -9,7 +9,6 @@ podfile: Example/Podfile
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod install --project-directory=Example
-- xcrun simctl list # list devices
 
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
@@ -18,7 +17,4 @@ script:
 - set -o pipefail
 - xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" clean build | xcpretty -c
 - xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" test
-
-#- open -b com.apple.iphonesimulator
-#- set -o pipefail && xcodebuild test -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -destination "OS=9.0,name=iPhone 6"
-#- pod lib lint --quick
+- pod lib lint --quick
