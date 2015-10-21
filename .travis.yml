@@ -15,6 +15,10 @@ install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
 
 script:
-- open -b com.apple.iphonesimulator
-- set -o pipefail && xcodebuild test -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -destination "OS=9.0,name=iPhone 6"
+- open -a "simulator" --args -CurrentDeviceUDID A84965FC-070D-4EAF-83E8-84FFE99F5866  #iphone 6s, iOS9.0
+- set -o pipefail && xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator clean build | xcpretty -c
+- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 6s" test
+
+#- open -b com.apple.iphonesimulator
+#- set -o pipefail && xcodebuild test -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -destination "OS=9.0,name=iPhone 6"
 #- pod lib lint --quick
