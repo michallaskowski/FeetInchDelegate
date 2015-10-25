@@ -15,7 +15,7 @@ install:
 
 script:
 - set -o pipefail
-- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" clean build | xcpretty -c || true
-- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.0,name=iPhone 5" test
+- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.1,name=iPhone 6s Plus" clean build | xcpretty -c || true
+- xcodebuild -workspace Example/FeetInchDelegate.xcworkspace -scheme FeetInchDelegate-Example -sdk iphonesimulator -destination "OS=9.1,name=iPhone 6s Plus" test
 - pod lib lint --quick
-#7
+#8
